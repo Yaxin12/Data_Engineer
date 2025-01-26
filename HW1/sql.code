@@ -1,0 +1,63 @@
+SELECT COUNT(*)
+FROM green_taxi_data
+WHERE trip_distance <= 1
+AND lpep_dropoff_datetime BETWEEN '2019-10-01' AND '2019-11-01';
+
+SELECT COUNT(*)
+FROM green_taxi_data
+WHERE trip_distance <= 3 AND trip_distance > 1 
+AND lpep_dropoff_datetime BETWEEN '2019-10-01' AND '2019-11-01';
+
+SELECT COUNT(*)
+FROM green_taxi_data
+WHERE trip_distance <= 3 AND trip_distance > 7 
+AND lpep_dropoff_datetime BETWEEN '2019-10-01' AND '2019-11-01';
+
+SELECT COUNT(*)
+FROM green_taxi_data
+WHERE trip_distance <= 10 AND trip_distance > 7 
+AND lpep_dropoff_datetime BETWEEN '2019-10-01' AND '2019-11-01';
+
+SELECT COUNT(*)
+FROM green_taxi_data
+WHERE trip_distance > 10 
+AND lpep_dropoff_datetime BETWEEN '2019-10-01' AND '2019-11-01';
+
+SELECT 
+    DATE(lpep_dropoff_datetime) AS pickup_date,
+    SUM(trip_distance) AS total_distance
+FROM 
+    green_taxi_data
+GROUP BY 
+    DATE(lpep_dropoff_datetime)
+ORDER BY 
+    total_distance DESC
+LIMIT 1
+
+SELECT zs."Zone", yt."PULocationID" AS pickupID, SUM(yt.total_amount) AS total_amount_sum
+FROM green_taxi_data yt
+JOIN zones zs ON yt."PULocationID" = zs."LocationID"
+WHERE yt.lpep_pickup_datetime BETWEEN '2019-10-18' AND '2019-10-19'
+GROUP BY zs."Zone", yt."PULocationID"
+HAVING SUM(yt.total_amount) > 13000
+ORDER BY total_amount_sum DESC;
+
+SELECT 
+    zpu."Zone" AS pickup_zone,
+    zdo."Zone" AS dropoff_zone,
+    MAX(gtd.tip_amount) AS max_tip
+FROM 
+    green_taxi_data gtd
+JOIN 
+    zones zpu ON gtd."PULocationID"  = zpu."LocationID"
+JOIN 
+    zones zdo ON gtd."PULocationID"  = zdo."LocationID"
+WHERE 
+    zpu."Zone" = 'East Harlem North'
+    AND gtd.lpep_pickup_datetime >= '2019-10-01'
+    AND gtd.lpep_pickup_datetime < '2019-11-01'
+GROUP BY 
+    zpu."Zone", zdo."Zone"
+ORDER BY 
+    max_tip DESC
+LIMIT 2;
