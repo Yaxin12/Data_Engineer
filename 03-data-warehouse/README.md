@@ -12,7 +12,7 @@ OPTIONS(
 ```bash
 SELECT COUNT(*)
 From dataenigneer.us_central1_dataset.external_yellow_taxi_002;
-```bash
+```
 
 ##Question 1: What is count of records for the 2024 Yellow Taxi Data?
 
