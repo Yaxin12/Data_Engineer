@@ -2,19 +2,20 @@
 CREATE SCHEMA `dataenigneer.us_central1_dataset`
 OPTIONS(location="us-central1");
 ```
-
+```bash
 CREATE OR REPLACE EXTERNAL TABLE `dataenigneer.us_central1_dataset.external_yellow_taxi_002`
 OPTIONS(
   format = 'PARQUET',
   uris = ['gs://dataenigneer_yellow_taxi_002/*.parquet']
 );
-
-
+```
+```bash
 SELECT COUNT(*)
 From dataenigneer.us_central1_dataset.external_yellow_taxi_002;
+```bash
 
+##Question 1: What is count of records for the 2024 Yellow Taxi Data?
 
-Question 1: What is count of records for the 2024 Yellow Taxi Data?
 * 65,623
 * 840,402
 * 20,332,093
