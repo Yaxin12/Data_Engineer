@@ -13,6 +13,7 @@ OPTIONS(
 SELECT COUNT(*)
 From dataenigneer.us_central1_dataset.external_yellow_taxi_002;
 ```
+[View PDF](https://github.com/Yaxin12/Data_Engineer/blob/main/03-data-warehouse/HW3.pdf)
 
 ## Question 1: 
 
