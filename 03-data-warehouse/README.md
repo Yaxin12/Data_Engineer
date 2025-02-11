@@ -1,7 +1,7 @@
-'''bash
+```bash
 CREATE SCHEMA `dataenigneer.us_central1_dataset`
 OPTIONS(location="us-central1");
-'''
+```
 
 CREATE OR REPLACE EXTERNAL TABLE `dataenigneer.us_central1_dataset.external_yellow_taxi_002`
 OPTIONS(
