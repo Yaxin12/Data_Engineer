@@ -8,6 +8,13 @@
 ![alt text](https://github.com/Yaxin12/Data_Engineer/blob/main/Workshop%201_Ingestion%20with%20dlt/image/1.png)
 
 ## Question 2: Define & Run the Pipeline (NYC Taxi API)
+
+### How many tables were created?
+- [ ] 2
+- [x] 4
+- [ ] 6
+- [ ] 8
+
 Use dlt to extract all pages of data from the API.
 
 Steps:
@@ -86,8 +93,43 @@ print(f"Number of tables created: {num_tables}")
 ```
 ![alt text](https://github.com/Yaxin12/Data_Engineer/blob/main/Workshop%201_Ingestion%20with%20dlt/image/2.png)
 
-### How many tables were created?
-- [ ] 2
-- [x] 4
-- [ ] 6
-- [ ] 8
+
+## Question 3: Explore the loaded data
+
+```bash
+df = pipeline.dataset(dataset_type="default").rides.df()
+df
+```
+### What is the total number of records extracted?
+
+- [ ] 2500
+- [ ] 5000
+- [ ] 7500
+- [x] 10000
+
+![alt text](https://github.com/Yaxin12/Data_Engineer/blob/main/Workshop%201_Ingestion%20with%20dlt/image/3.png)
+
+## Question 4: Trip Duration Analysis
+
+```bash
+with pipeline.sql_client() as client:
+    res = client.execute_sql(
+            """
+            SELECT
+            AVG(date_diff('minute', trip_pickup_date_time, trip_dropoff_date_time))
+            FROM rides;
+            """
+        )
+    # Prints column values of the first row
+    print(res)
+```
+### What is the average trip duration?
+
+- [x] 12.3049
+- [ ] 22.3049
+- [ ] 32.3049
+- [ ] 42.3049
+
+![alt text](https://github.com/Yaxin12/Data_Engineer/blob/main/Workshop%201_Ingestion%20with%20dlt/image/4.png)
+
+source link: https://colab.research.google.com/drive/1FiAHNFenM8RyptyTPtDTfqPCi5W6KX_V?usp=sharing#scrollTo=jRR8GJS-8PNG
