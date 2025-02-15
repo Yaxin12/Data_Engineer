@@ -5,7 +5,7 @@
 !dlt --version
 ```
 
-![alt text](https://github.com/Yaxin12/Data_Engineer/blob/main/Workshop%201_Ingestion%20with%20dlt/image/Screenshot%202025-02-15%20114704.png)
+![alt text](https://github.com/Yaxin12/Data_Engineer/blob/main/Workshop%201_Ingestion%20with%20dlt/image/1.png)
 
 ## Question 2: Define & Run the Pipeline (NYC Taxi API)
 Use dlt to extract all pages of data from the API.
@@ -84,4 +84,10 @@ print(data_df)
 num_tables = len(tables_df)
 print(f"Number of tables created: {num_tables}")
 ```
-![alt text](https://github.com/Yaxin12/Data_Engineer/blob/main/Workshop%201_Ingestion%20with%20dlt/image/Screenshot%202025-02-15%20115238.png)
+![alt text](https://github.com/Yaxin12/Data_Engineer/blob/main/Workshop%201_Ingestion%20with%20dlt/image/2.png)
+
+### How many tables were created?
+- [ ] 2
+- [x] 4
+- [ ] 6
+- [ ] 8
