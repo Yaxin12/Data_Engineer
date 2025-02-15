@@ -132,4 +132,4 @@ with pipeline.sql_client() as client:
 
 ![alt text](https://github.com/Yaxin12/Data_Engineer/blob/main/Workshop%201_Ingestion%20with%20dlt/image/4.png)
 
-source link: https://colab.research.google.com/drive/1FiAHNFenM8RyptyTPtDTfqPCi5W6KX_V?usp=sharing#scrollTo=jRR8GJS-8PNG
+reference link: https://colab.research.google.com/drive/1FiAHNFenM8RyptyTPtDTfqPCi5W6KX_V?usp=sharing#scrollTo=jRR8GJS-8PNG
