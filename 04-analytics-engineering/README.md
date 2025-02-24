@@ -1,4 +1,4 @@
-## Prerequisites ##
+## Prerequisites ## [x]
 By this stage of the course you should have already:
 
 A running warehouse (BigQuery or postgres)
