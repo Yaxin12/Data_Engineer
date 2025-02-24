@@ -8,4 +8,5 @@ Yellow taxi data - Years 2019 and 2020
 Green taxi data - Years 2019 and 2020
 fhv data - Year 2019.
 
-[text alt] (https://github.com/Yaxin12/Data_Engineer/blob/main/04-analytics-engineering/image/1.png)
+![Alt text](https://github.com/Yaxin12/Data_Engineer/blob/main/04-analytics-engineering/image/1.png)
+
