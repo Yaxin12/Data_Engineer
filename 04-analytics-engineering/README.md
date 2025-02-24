@@ -1,4 +1,4 @@
-## Prerequisites ## [x]
+## Prerequisites ## :white_check_mark:
 By this stage of the course you should have already:
 
 A running warehouse (BigQuery or postgres)
@@ -9,4 +9,5 @@ Green taxi data - Years 2019 and 2020
 fhv data - Year 2019.
 
 ![Alt text](https://github.com/Yaxin12/Data_Engineer/blob/main/04-analytics-engineering/image/1.png)
+
 
