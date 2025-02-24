@@ -1,4 +1,4 @@
-## Prerequisites ## :white_check_mark:
+## Prerequisites :white_check_mark:
 By this stage of the course you should have already:
 
 A running warehouse (BigQuery or postgres)
