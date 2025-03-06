@@ -22,6 +22,7 @@
 - [ ] 142
 - [x] 162
 - [ ] 182
+
 [For Question 3 & 4 & 6, View Result of Script] (https://github.com/Yaxin12/Data_Engineer/blob/main/05-batch/code/homework.ipynb)
 
 ### Question 5. User Interface (1 point)
