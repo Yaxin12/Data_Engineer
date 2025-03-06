@@ -1,4 +1,6 @@
 ### Question 1. PySpark version (1 point)
+3.3.2
+! [Alt text] https://github.com/Yaxin12/Data_Engineer/blob/main/05-batch/image/1.png
 
 ### Question 2. Size of partition (1 point)
 - [ ] 6MB
