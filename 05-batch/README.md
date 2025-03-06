@@ -29,6 +29,7 @@
 - [ ] 443
 - [x] 4040
 - [ ] 8080
+
 ![Alt text](https://github.com/Yaxin12/Data_Engineer/blob/main/05-batch/image/3.png) 
 
 ### Question 6. Least frequent pickup location zone (1 point)
